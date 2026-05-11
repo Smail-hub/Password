@@ -1,16 +1,15 @@
-Password = input("Введите пароль: ")
+password = input("Введите пароль: ")
 
-Password_len = len(Password)
+password_len = len(password)
 
-if Password_len < 13:
+if password_len < 13:
 	print("Короткий")
-if Password_len > 12:
+elif password_len > 12:
 	print("Длинный")
 
-for text in Password:
-	print(text)
+for text in password:
 	if text.isdigit():
-		print("-Цифра")
+		print(text, "- Цифра")
 	if text.isalpha():
-		print("-Буква")
-print("Длинна пароля:", Password_len)
+		print(text, "- Буква")
+print("Длина пароля:", password_len)
