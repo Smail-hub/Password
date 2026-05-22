@@ -7,9 +7,16 @@ if password_len < 13:
 elif password_len > 12:
 	print("Длинный")
 
-for text in password:
-	if text.isdigit():
-		print(text, "- Цифра")
-	if text.isalpha():
-		print(text, "- Буква")
-print("Длина пароля:", password_len)
+found_digit = False
+
+for symbol in password:
+	if symbol.isdigit():
+		found_digit = True
+if found_digit:
+	print("Есть цифры")
+else:
+	print("Нет цифр")
+
+#def has_degit(password):
+#
+#def is_very_long(password):
