@@ -35,13 +35,10 @@
 
 #=================================================
 
-
-def get_vat_and_price_with_vat(price):
-    vat_rate = 20
-    vat = price * vat_rate / 100
-    price_with_vat = price + vat
-    return vat, price_with_vat
+def return_interrupt_example():
+    print('Это фраза всегда будет печататься на экране')
+    somevalue = 1000
+    return somevalue
+    print(somevalue)
     
-vat, price = get_vat_and_price_with_vat(100)
-print(vat)  # 20
-print(price)  # 120
+return_interrupt_example()
