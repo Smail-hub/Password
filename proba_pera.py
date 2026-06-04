@@ -1,44 +1,15 @@
-#a = input()
-#
-#found_letter = False
-#for symbol in a:
-#    if symbol.isalpha():
-#        found_letter = True
-#if found_letter:
-#    print("Есть буква!")
-#else:
-#    print("Нет буквы!")
-#
-#======================================================================================
-#
-#a = input()
-#
-#found_exclamation_mark = False
-#found_letter = False
-#
-#for symbol in a:
-#    if symbol == "!":
-#        found_exclamation_mark = True
-#
-#    if symbol.isalpha():
-#        found_letter = True
-#
-#if found_exclamation_mark:
-#    print("Есть восклицательный знак!")
-#else:
-#    print("Нет восклицательного знака!")
-#
-#if found_letter:
-#    print("Есть буква!")
-#else:
-#    print("Нет буквы!")
+def has_digit(text):
+    return any (sumbol.isdigit() for sumbol in text)
 
-#=================================================
+a = input("Введите текст: ")
+if has_digit(a):
+    print("Есть цифры")
+else:
+    print("Нет цифр")
+======================================================
 
-def return_interrupt_example():
-    print('Это фраза всегда будет печататься на экране')
-    somevalue = 1000
-    return somevalue
-    print(somevalue)
+def is_very_long():
+    password_len = len(a)
     
-return_interrupt_example()
+    
+print(password_len)
