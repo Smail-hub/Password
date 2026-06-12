@@ -1,15 +1,9 @@
-def has_digit(text):
-    return any (sumbol.isdigit() for sumbol in text)
-
-a = input("Введите текст: ")
-if has_digit(a):
-    print("Есть цифры")
-else:
-    print("Нет цифр")
-======================================================
-
-def is_very_long():
-    password_len = len(a)
-    
-    
-print(password_len)
+@app.get("/users")
+async def get_users(
+    user_id: Annotated[int | None, Query()] = None,
+) -> list[User]:
+    async with asyncsessionmaker.begin() as session:
+        stmt = select(User).where(User.isactive.is(True))
+        if user_id is not None:
+            stmt = stmt.where(User.id == user_id)
+        return (await session.scalars(stmt)).all()
