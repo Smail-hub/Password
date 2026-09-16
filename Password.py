@@ -6,5 +6,13 @@ def has_digit(password):
 def is_very_long(password):
 	return len(password) > 12
 
-print(has_digit(password))
-print(is_very_long(password))
+score = 0
+
+if has_digit(password):
+	score = score + 2
+
+if is_very_long(password):
+	score = score + 2
+
+
+print(f"рейтинг пароля {score}")
